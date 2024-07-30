@@ -1,0 +1,116 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    /* background-color: black; */
+}
+
+/* Header Style */
+header {
+    /* background-color: black; */
+    /* border-bottom: 1px solid #e0e0e0; */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    /* width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; */
+}
+
+/* Header Title Style */
+header div {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navigation Style */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation List Style */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-left: 270px;
+}
+
+nav ul li {
+    font-size: 1em;
+    color: #fff;
+    
+}
+
+nav ul li:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Submit Button Style */
+nav input[type="submit"] {
+    background-color: #cc00ff;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 100px;
+    transition: background-color 0.3s;
+}
+
+/* Hover Effects */
+nav input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.captcha-container {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.captcha-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.captcha-label input {
+    display: none;
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+    position: relative;
+}
+
+.captcha-label input:checked + .checkmark {
+    background-color: #4caf50;
+    border: 2px solid #4caf50;
+}
+
+.captcha-label input:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
